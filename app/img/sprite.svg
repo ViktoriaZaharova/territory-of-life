@@ -27,4 +27,12 @@
         <path d="M2.91589 0L0 2.91589L9.08411 12L0 21.0841L2.91589 24L12 14.9159L21.0841 24L24 21.0841L14.9159 12L24 2.91589L21.0841 0L12 9.08411L2.91589 0Z"/>
     </symbol>
 
+    <symbol id="arrow-left" viewBox="0 0 15 22">
+        <path d="M13 2L4 11L13 20" stroke-width="5"/>
+    </symbol>
+
+    <symbol id="arrow-right" viewBox="0 0 15 22">
+        <path d="M2 2L11 11L2 20" stroke-width="5"/>
+    </symbol>
+
 </svg>

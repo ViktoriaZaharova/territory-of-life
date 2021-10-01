@@ -19,6 +19,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -26,13 +27,30 @@
 
 <body>
 
+<div class="mobile-menu">
+  <div class="btn-close-menu">
+    <svg class="svg-icon">
+      <use xlink:href="img/sprite.svg#close"></use>
+    </svg>
+  </div>
+  <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+
+  <ul class="menu">
+    <li><a href="#">Производим</a></li>
+    <li><a href="#" class="active">Строим</a></li>
+    <li><a href="#">Управляем</a></li>
+  </ul>
+
+  <a href="tel:+78412210677" class="phone">+7 (8412) 21-06-77</a>
+</div>
+
 <header>
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-4 col-sm-4 col-md-3 col-lg-2">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
         <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
       </div>
-      <div class="col-8 col-sm-8 col-ms-9 col-lg-10 d-flex align-items-center flex-wrap">
+      <div class="col-6 col-sm-8 col-md-9 col-lg-10 d-flex align-items-center flex-wrap">
         <ul class="menu">
           <li><a href="#">Производим</a></li>
           <li><a href="#" class="active">Строим</a></li>
@@ -42,6 +60,12 @@
 
         <button type="button" class="btn btn-accent" data-toggle="modal" data-target="#callbackModal">Заказать звонок
         </button>
+
+        <div class="btn-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </div>
@@ -97,34 +121,34 @@
         <div class="home-information">
           <div class="timeline">
             <div class="row">
-              <div class="col-6 col-sm-3 col-md-2">
+              <div class="col-12 col-sm-6 col-md-2 mb-20">
                 <div class="timeline-box active">
                   <h3>Торговые площади <br>цокольные</h3>
                 </div>
               </div>
-              <div class="col-6 col-sm-3 col-md-2">
+              <div class="col-12 col-sm-6 col-md-2 mb-20">
                 <div class="timeline-box">
                   <h3>Торговые площади галерея</h3>
                 </div>
               </div>
-              <div class="col-6 col-sm-3 col-md-2">
+              <div class="col-12 col-sm-6 col-md-2 mb-20">
                 <div class="timeline-box">
                   <h3>Торговые <br>
                     центры</h3>
                 </div>
               </div>
-              <div class="col-6 col-sm-3 col-md-2">
+              <div class="col-12 col-sm-6 col-md-2 mb-20">
                 <div class="timeline-box">
                   <h3>Земельные <br>
                     участки</h3>
                 </div>
               </div>
-              <div class="col-6 col-sm-3 col-md-2">
+              <div class="col-12 col-sm-6 col-md-2 mb-20">
                 <div class="timeline-box">
                   <h3>Уличные торговые <br>павильоны</h3>
                 </div>
               </div>
-              <div class="col-6 col-sm-3 col-md-2">
+              <div class="col-12 col-sm-6 col-md-2 mb-20">
                 <div class="timeline-box">
                   <h3>Офисные <br>
                     помещения</h3>
@@ -156,7 +180,8 @@
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-col mb-36">
         <div class="product-card">
-          <div class="product-card__img"><img src="img/product1.png" alt=""></div>
+          <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+              src="img/product1.png" alt=""></a>
           <div class="product-card__body">
             <div class="product-card__title">Строение №6, микрорайона №7 <br>
               ул. Генерала Глазунова, 21
@@ -174,7 +199,8 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-col mb-36">
         <div class="product-card">
-          <div class="product-card__img"><img src="img/product2.png" alt=""></div>
+          <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+              src="img/product2.png" alt=""></a>
           <div class="product-card__body">
             <div class="product-card__title">Строение №6, микрорайона №7 <br>
               ул. Генерала Глазунова, 21
@@ -192,7 +218,8 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-col mb-36">
         <div class="product-card">
-          <div class="product-card__img"><img src="img/product3.png" alt=""></div>
+          <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+              src="img/product3.png" alt=""></a>
           <div class="product-card__body">
             <div class="product-card__title">Строение №6, микрорайона №7 <br>
               ул. Генерала Глазунова, 21
@@ -210,7 +237,8 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-col mb-36">
         <div class="product-card">
-          <div class="product-card__img"><img src="img/product4.png" alt=""></div>
+          <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+              src="img/product4.png" alt=""></a>
           <div class="product-card__body">
             <div class="product-card__title">Строение №6, микрорайона №7 <br>
               ул. Генерала Глазунова, 21
@@ -228,7 +256,8 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-col mb-36">
         <div class="product-card">
-          <div class="product-card__img"><img src="img/product5.png" alt=""></div>
+          <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+              src="img/product5.png" alt=""></a>
           <div class="product-card__body">
             <div class="product-card__title">Строение №6, микрорайона №7 <br>
               ул. Генерала Глазунова, 21
@@ -246,7 +275,8 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-col mb-36">
         <div class="product-card">
-          <div class="product-card__img"><img src="img/product4.png" alt=""></div>
+          <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+              src="img/product4.png" alt=""></a>
           <div class="product-card__body">
             <div class="product-card__title">Строение №6, микрорайона №7 <br>
               ул. Генерала Глазунова, 21
@@ -264,7 +294,8 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-col mb-36">
         <div class="product-card">
-          <div class="product-card__img"><img src="img/product2.png" alt=""></div>
+          <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+              src="img/product2.png" alt=""></a>
           <div class="product-card__body">
             <div class="product-card__title">Строение №6, микрорайона №7 <br>
               ул. Генерала Глазунова, 21
@@ -282,7 +313,8 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-col mb-36">
         <div class="product-card">
-          <div class="product-card__img"><img src="img/product3.png" alt=""></div>
+          <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+              src="img/product3.png" alt=""></a>
           <div class="product-card__body">
             <div class="product-card__title">Строение №6, микрорайона №7 <br>
               ул. Генерала Глазунова, 21
@@ -490,6 +522,338 @@
   </div>
 </div>
 
+
+<div class="modal fade product-modal" id="productModal" tabindex="-1" aria-labelledby="productModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-header__line">
+          <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+          <div class="product-modal-title">
+            <h3>Строение №6</h3>
+            <div class="address">Микрорайон №7
+              ул. Генерала Глазунова, 21
+            </div>
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="product-modal-details">
+          <div class="product-modal-details-box">
+            <div class="photo-object"><img src="img/object.jpg" alt=""></div>
+
+            <div class="object-details product-modal-object">
+              <h3>Описание</h3>
+
+              <ul class="object-details__list">
+                <li>
+                  <p>Всего <br>квартир</p><span>623</span>
+                </li>
+                <li>
+                  <p>Всего <br>жителей</p><span>1 356</span>
+                </li>
+                <li>
+                  <p>Емкость <br>(м2)</p><span>13 254</span>
+                </li>
+                <li>
+                  <p>Свободно <br>(м2)</p><span>23 480</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="object-availability product-modal-object">
+              <h3>Объекты в наличии</h3>
+
+              <div class="availability-slider w-100">
+                <div class="slide">
+                  <ul class="list-object">
+                    <li>
+                      <h4>Помещение №1
+                      </h4>
+                      <div class="status color-green">Свободно</div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №2</h4>
+                      <div class="status color-green">Свободно</div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №3
+                      </h4>
+                      <div class="dropdown status">
+                        <div class="color-green dropdown-toggle" id="dropdownMenuButton3" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">Свободно</div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                          <a class="dropdown-item" href="#">Подбор помещения</a>
+                          <a class="dropdown-item" href="#">Street retail</a>
+                        </div>
+                      </div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №4</h4>
+                      <div class="dropdown status">
+                        <div class="color-orange dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">Занято
+                        </div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Подбор помещения</a>
+                          <a class="dropdown-item" href="#">Street retail</a>
+                        </div>
+                      </div>
+                      <div class="dropdown">
+                        <a href="#" class="btn btn-border-orange dropdown-toggle" id="dropdownMenuButton2"
+                           data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">о владельце</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                          <a class="dropdown-item" href="#">Подбор помещения</a>
+                          <a class="dropdown-item" href="#">Street retail</a>
+                          <a class="dropdown-item" href="#">Отделка «Под кллюч»</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="slide">
+                  <ul class="list-object">
+                    <li>
+                      <h4>Помещение №1
+                      </h4>
+                      <div class="status color-green">Свободно</div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №2</h4>
+                      <div class="status color-green">Свободно</div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №3
+                      </h4>
+                      <div class="status color-green">Свободно</div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №4</h4>
+                      <div class="status color-orange">Занято</div>
+                      <a href="#" class="btn btn-border-orange">о владельце</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="slide">
+                  <ul class="list-object">
+                    <li>
+                      <h4>Помещение №1
+                      </h4>
+                      <div class="status color-green">Свободно</div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №2</h4>
+                      <div class="status color-green">Свободно</div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №3
+                      </h4>
+                      <div class="status color-green">Свободно</div>
+                      <a href="#" class="btn btn-accent">подробнее</a>
+                    </li>
+                    <li>
+                      <h4>Помещение №4</h4>
+                      <div class="status color-orange">Занято</div>
+                      <a href="#" class="btn btn-border-orange">о владельце</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-modal-details-gallery">
+            <div class="product-modal-details-gallery__item">
+              <div class="image"><img src="img/product-details1.png" alt=""></div>
+              <div class="floor">1 этаж</div>
+            </div>
+            <div class="product-modal-details-gallery__item product-modal-details-gallery__item-info">
+              <div class="image"><img src="img/product1.png" alt=""></div>
+              <div class="box-text">
+                <h4>Помещение №1
+                </h4>
+                <div class="characteristics">
+                  <p>119,73 м2</p>
+
+                  <p>13 768 950 ₽</p>
+                </div>
+
+                <button class="btn btn-accent" type="button" data-target="#callbackModal" data-toggle="modal"
+                        data-dismiss="modal" aria-label="Close">Оставить заявку
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-banner">
+          <img src="img/img-home.jpg" alt="" class="home-banner__img">
+          <div class="home-banner-content">
+            <div class="home-company">
+              <div class="home-company-logo"><img src="img/company1.svg" alt=""></div>
+              <div class="home-company-logo"><img src="img/company2.svg" alt=""></div>
+            </div>
+
+            <div class="home-advantages">
+              <div class="home-advantages__item">
+                <p>Объектов с коммерческой <br>недвижимостью</p>
+                <span>12</span>
+              </div>
+              <div class="home-advantages__item">
+                <p>Всего <br>квартир</p>
+                <span>1356</span>
+              </div>
+              <div class="home-advantages__item">
+                <p>Свободно <br>помещений</p>
+                <span>76</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="recommended">
+          <h2>Рекомендуемые объекты</h2>
+          <div class="recommended-slider w-100">
+            <div class="slide">
+              <div class="product-card">
+                <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+                    src="img/product1.png" alt=""></a>
+                <div class="product-card__body">
+                  <div class="product-card__title">Строение №6, микрорайона №7 <br>
+                    ул. Генерала Глазунова, 21
+                  </div>
+                  <div class="product-characteristics">
+                    <p>Помещение №1</p>
+                    <p>119,73 м2</p>
+                    <p>13 768 950 ₽</p>
+                  </div>
+                  <button class="btn btn-accent" type="submit" data-toggle="modal" data-target="#callbackModal">Оставить
+                    заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+                    src="img/product2.png" alt=""></a>
+                <div class="product-card__body">
+                  <div class="product-card__title">Строение №6, микрорайона №7 <br>
+                    ул. Генерала Глазунова, 21
+                  </div>
+                  <div class="product-characteristics">
+                    <p>Помещение №1</p>
+                    <p>119,73 м2</p>
+                    <p>13 768 950 ₽</p>
+                  </div>
+                  <button class="btn btn-accent" type="submit" data-toggle="modal" data-target="#callbackModal">Оставить
+                    заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+                    src="img/product3.png" alt=""></a>
+                <div class="product-card__body">
+                  <div class="product-card__title">Строение №6, микрорайона №7 <br>
+                    ул. Генерала Глазунова, 21
+                  </div>
+                  <div class="product-characteristics">
+                    <p>Помещение №1</p>
+                    <p>119,73 м2</p>
+                    <p>13 768 950 ₽</p>
+                  </div>
+                  <button class="btn btn-accent" type="submit" data-toggle="modal" data-target="#callbackModal">Оставить
+                    заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+                    src="img/product1.png" alt=""></a>
+                <div class="product-card__body">
+                  <div class="product-card__title">Строение №6, микрорайона №7 <br>
+                    ул. Генерала Глазунова, 21
+                  </div>
+                  <div class="product-characteristics">
+                    <p>Помещение №1</p>
+                    <p>119,73 м2</p>
+                    <p>13 768 950 ₽</p>
+                  </div>
+                  <button class="btn btn-accent" type="submit" data-toggle="modal" data-target="#callbackModal">Оставить
+                    заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+                    src="img/product2.png" alt=""></a>
+                <div class="product-card__body">
+                  <div class="product-card__title">Строение №6, микрорайона №7 <br>
+                    ул. Генерала Глазунова, 21
+                  </div>
+                  <div class="product-characteristics">
+                    <p>Помещение №1</p>
+                    <p>119,73 м2</p>
+                    <p>13 768 950 ₽</p>
+                  </div>
+                  <button class="btn btn-accent" type="submit" data-toggle="modal" data-target="#callbackModal">Оставить
+                    заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="product-card">
+                <a href="#" data-toggle="modal" data-target="#productModal" class="product-card__img"><img
+                    src="img/product3.png" alt=""></a>
+                <div class="product-card__body">
+                  <div class="product-card__title">Строение №6, микрорайона №7 <br>
+                    ул. Генерала Глазунова, 21
+                  </div>
+                  <div class="product-characteristics">
+                    <p>Помещение №1</p>
+                    <p>119,73 м2</p>
+                    <p>13 768 950 ₽</p>
+                  </div>
+                  <button class="btn btn-accent" type="submit" data-toggle="modal" data-target="#callbackModal">Оставить
+                    заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <script src="js/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
@@ -497,6 +861,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
         integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>
