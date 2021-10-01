@@ -1,0 +1,656 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+//*::-webkit-input-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*:-moz-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*::-moz-placeholder
+//  color: #666
+//  opacity: 1
+//
+//*:-ms-input-placeholder
+//  color: #666
+//  opacity: 1
+//
+//body input:focus:required:invalid,
+//body textarea:focus:required:invalid
+//  color: #666
+//
+//body input:required:valid,
+//body textarea:required:valid
+//  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #fff
+  color: #323732
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0
+  box-sizing: border-box
+  height: 50px
+  width: 100%
+  text-align: center
+  border: 1px solid #C4C4C4
+    radius: 10px
+  font-family: $default-font
+  font-size: 18px
+  color: #7B7B7B
+
+  &::placeholder
+    color: #7B7B7B
+
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+label
+  display: block
+  width: 100%
+  margin: 0 0 21px
+
+button, .btn
+  outline: none
+  box-shadow: none
+  padding: 0
+  border: none
+  font-family: $default-font
+  font-size: 16px
+  font-weight: 500
+  cursor: pointer
+  transition: .3s ease
+
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  height: 40px
+  padding: 11px 9px
+  border-radius: 5px
+
+.btn-accent
+  background: $accent
+  color: #fff
+
+  &:hover
+    background: $orange
+    color: #fff
+
+.btn-orange
+  background: $orange
+  color: #fff
+  &:hover
+    background: $accent
+    color: #fff
+
+.btn-icon
+  fill: none
+  stroke: #fff
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 21px
+  height: 10px
+  margin: 0 0 0 10px
+
+.consent
+  margin: 0 auto
+  font-size: 12px
+  color: #7B7B7B
+  text-align: center
+  max-width: 222px
+  width: 100%
+
+h1
+  font-size: 48px
+  font-weight: 500
+  color: $title
+
+h2
+  width: 100%
+  font-size: 36px
+  font-weight: 500
+  color: $title
+  margin: 0 0 45px
+
+
+.bg-grey
+  background: #EDEDED
+
+.container
+  max-width: 1840px
+  padding: 0 10px
+
+.row
+  margin: 0 -10px
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto
+  padding: 0 10px
+
+.mb-36
+  margin-bottom: 36px
+
+.mb-27
+  margin-bottom: 27px
+
+.svg-icon
+  width: 100%
+  height: 100%
+  display: inline-block
+
+.w-100
+  width: 100%
+
+//header
+header
+  padding: 34px 0 50px
+
+  .phone
+    position: relative
+    padding: 0 63px 0 37px
+    font-size: 24px
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 1px
+      height: 40px
+      background: #DDDDDD
+
+  .btn
+    font-size: 14px
+
+.logo
+  display: flex
+  align-items: center
+  max-width: 204px
+  width: 100%
+
+.menu
+  margin: 0 auto
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  font-size: 24px
+
+  li
+    margin: 0 77px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      position: relative
+      color: #004632
+
+      &:hover
+        color: $accent
+
+      &:before
+        content: ''
+        position: absolute
+        left: 50%
+        top: -48px
+        width: 31px
+        height: 31px
+        transform: rotate(45deg) translate(-50%, 0)
+        background: $accent
+        opacity: 0
+        transition: .3s ease
+
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -8px
+        width: 0
+        height: 2px
+        background: #004632
+        transition: .3s ease
+
+    .active
+      &:after
+        width: 100%
+
+      &:before
+        opacity: 1
+
+.phone
+  color: $accent
+  font-size: 32px
+
+  &:hover
+    color: $orange
+
+//home
+.awards
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+
+  &-item
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 25%
+
+.home-banner
+  margin: 36px 0 0
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  z-index: 1
+
+.home-banner__img
+  width: 100%
+
+.home-banner-content
+  width: 100%
+  position: absolute
+  left: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+
+.home-company
+  padding: 35px 42px
+  display: flex
+  align-items: center
+
+
+.home-company-logo
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 228px
+  height: 73px
+  background: #fff
+  border-radius: 10px
+  margin: 0 36px 0 0
+
+  &:last-child
+    margin: 0
+
+.home-advantages
+  background: $accent
+  border-radius: 10px
+  color: #fff
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  padding: 35px 52px
+  font-size: 24px
+  font-weight: 600
+
+  &__item
+    border: 1px solid #fff
+      radius: 10px
+    display: flex
+    align-items: center
+    padding: 8px 32px 7px 21px
+    margin: 0 40px 0 0
+    min-width: 286px
+
+    &:last-child
+      margin: 0
+
+    span
+      font-size: 48px
+      margin: 0 0 0 auto
+
+.home-information
+  background: #E8F0F3
+  border-radius: 10px
+  padding: 200px 29px 70px
+  margin: -162px 0 0
+  z-index: -1
+
+.timeline
+  width: 100%
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0)
+    bottom: 10px
+    width: calc(100% - 280px)
+    height: 1px
+    background: #000
+
+.timeline-box
+  text-align: center
+  font-weight: 600
+  color: #323732
+  padding: 0 0 40px
+  position: relative
+  height: 100%
+
+  &:after
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0)
+    bottom: 0
+    width: 20px
+    height: 20px
+    border: 3px solid #323732
+      radius: 50%
+    background: #fff
+
+.timeline-box.active
+  &:after
+    background: #323732
+
+.list-category
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  font-size: 14px
+  font-weight: 500
+  margin: 58px 0 0
+
+  li
+    margin: 0 33px 10px 0
+
+    &:last-child
+      margin: 0 0 10px
+
+    a
+      width: 174px
+      height: 48px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #73B978
+      border: 1px solid #73B978
+        radius: 5px
+
+      &:hover
+        color: $title
+
+    .active
+      color: #323732
+      border-color: #323732
+
+//suggestions
+.suggestions
+  padding: 74px 0 86px
+
+.product-card
+  height: 100%
+  width: 100%
+  border: 1px solid #C4C4C4
+    radius: 10px
+  text-align: center
+  padding: 10px 50px 35px
+
+  &__img
+    width: 100%
+    height: 283px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto 15px
+
+    img
+      max-height: 100%
+
+  &__title
+    font-size: 16px
+    font-weight: 600
+    color: #323732
+    margin: 0 auto
+
+  &__body
+    height: calc(100% - 283px)
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+
+  .btn
+    margin: auto auto 0
+    padding: 10px 22px
+    font-size: 16px
+    font-weight: 500
+
+.product-characteristics
+  margin: 28px auto 33px
+  font-size: 18px
+
+.btn-load
+  padding: 10px 70px
+  margin: 0 auto
+  font-weight: 500
+  font-size: 18px
+
+//footer
+footer
+  padding: 40px 0
+  margin: 70px 0 0
+
+.footer-top
+  padding: 0 0 46px
+  border-bottom: 1px solid #D6E2EC
+
+.list-social
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 0 0 auto
+  width: fit-content
+  li
+    margin: 0 30px 0 0
+    &:last-child
+      margin: 0
+    a
+      fill: $accent
+      display: flex
+      align-items: center
+      justify-content: center
+
+
+.links-fb
+  width: 14px
+  height: 27px
+
+.links-vk
+  width: 29px
+  height: 17px
+
+.links-youtube
+  width: 30px
+  height: 19px
+
+.link-instagram
+  width: 28px
+  height: 27px
+
+.footer-bottom
+  padding: 70px 0 0
+
+.footer-box
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  color: #3E3E3E
+  h3
+    font-weight: 500
+    font-size: 21px
+    margin: 0 0 28px
+    color: #4A4A49
+  &__bottom
+    margin: auto 0 0
+    p
+      max-width: 156px
+      margin: 0 0 13px
+  .btn
+    height: 59px
+    font-size: 21px
+    padding: 17px 31px
+
+
+.address
+  margin: 26px 0 0 0
+  padding: 0 0 0 10px
+
+.footer-menu
+  font-size: 16px
+  line-height: 49px
+  li
+    a
+      color: #3E3E3E
+      &:hover
+        color: $accent
+
+.modal-dialog
+  max-width: 658px
+  padding: 32px
+
+.modal-content
+  border: none
+    radius: 10px
+  position: relative
+  overflow: visible
+  padding: 66px 107px 39px
+
+.modal-body
+  padding: 0
+  border: none
+
+.modal-header
+  border-radius: 0
+  padding: 0
+  border: none
+  flex-wrap: wrap
+  .close
+    margin: 0
+    position: absolute
+    border-radius: 50%
+    width: 64px
+    height: 64px
+    opacity: 1
+    z-index: 2
+    background: $accent
+    padding: 20px
+    right: -32px
+    top: -32px
+    .svg-icon
+      fill: #fff
+
+.modal-title
+  text-align: center
+  text-transform: uppercase
+  color: $accent
+  margin: 0 auto 21px
+  font-size: 36px
+  font-weight: 500
+  line-height: normal
+
+.description-modal
+  font-size: 18px
+  color: #000
+  text-align: center
+  margin: 0 auto 28px
+
+.necessarily
+  text-align: center
+  margin: 0 auto 12px
+  color: #7B7B7B
+  font-size: 12px
+
+.form
+  .btn
+    margin: 16px auto 21px
+    height: 50px
+    padding: 10px 27px
+
+@import "media"
+// Всегда в конце
