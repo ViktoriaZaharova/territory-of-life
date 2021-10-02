@@ -39,3 +39,8 @@ $('.btn-burger').on('click', function () {
 $('.btn-close-menu').on('click', function () {
     $('.mobile-menu').fadeOut();
 });
+
+$('.btn-load').on('click', function (e) {
+    e.preventDefault();
+    $('.product-col:hidden').slice(0, 4).slideDown();
+});

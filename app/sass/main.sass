@@ -344,7 +344,7 @@ header
         content: ''
         position: absolute
         left: 50%
-        top: -50px
+        top: -52px
         width: 31px
         height: 31px
         transform: rotate(45deg) translate(-50%, 0)
@@ -578,6 +578,11 @@ header
     font-size: 16px
     font-weight: 500
 
+.product-col
+  display: none
+  &:nth-child(-n+8)
+    display: block
+
 .product-characteristics
   margin: 28px auto 33px
   font-size: 18px
@@ -686,13 +691,15 @@ footer
     radius: 10px
   position: relative
   padding: 66px 107px 39px
+  overflow: visible
 
-.modal-dialog-scrollable .modal-content
+.modal-dialog-scrollable .modal-content, .modal-dialog-scrollable .modal-body
   overflow: visible
 
 .modal-body
   padding: 0
   border: none
+  overflow: visible
 
 .modal-header
   border-radius: 0
@@ -764,7 +771,7 @@ footer
     padding: 0 50px
     margin: 0 0 52px
   .modal-dialog-scrollable .modal-content
-    overflow: hidden
+    overflow-y: auto
 
 
 .product-modal-details
